@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zehra Ahmad - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600&family=Playfair+Display:wght@400;700&family=Analogue&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Taskbar) -->
+    <header class="header">
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About Me</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Profile Section -->
+        <section class="profile-section">
+          <div class="profile-pic-container">
+        <img src="pfp.jpg" alt="Zehra Ahmad" class="profile-pic">
+        </div>
+     <div class="name-container">
+        <h1 class="profile-name">Zehra Ahmad</h1>
+    </div>
+    <div class="aesthetic-border"></div>
+</section>
+
+      <!-- About Me Section -->
+<section id="about" class="section">
+    <h2>About Me <span role="img" aria-label="computer">💻</span></h2>
+    <p>I am a Software Engineering student at FAST-NUCES, Peshawar. With a knack for creativity and design, I’m passionate about developing solutions that merge innovation and aesthetics. I have a strong foundation in computer science and am always eager to learn new technologies to enhance my skills.</p>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="section">
+    <h2>Education <span role="img" aria-label="books">📚</span></h2>
+    <ul>
+        <li><strong>FAST-NUCES, Peshawar</strong> - BSc Software Engineering (Ongoing) <span role="img" aria-label="graduation cap">🎓</span></li>
+        <li><strong>Jinnah College for Women</strong> - Pre-Engineering (Computer Science) <span role="img" aria-label="school">🏫</span></li>
+    </ul>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section">
+    <h2>Skills <span role="img" aria-label="gear">⚙️</span></h2>
+    <ul>
+        <li>Graphic Design (Canva, Adobe) <span role="img" aria-label="art palette">🎨</span></li>
+        <li>Frontend Development <span role="img" aria-label="laptop">💻</span></li>
+        <li>Social Media Management <span role="img" aria-label="camera">📸</span></li>
+        <li>Photography <span role="img" aria-label="camera">📷</span></li>
+    </ul>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="section">
+    <h2>Experience <span role="img" aria-label="briefcase">💼</span></h2>
+    <ul>
+        <li><strong>FAST Book Club</strong> - Social Media Lead <span role="img" aria-label="megaphone">📣</span></li>
+        <li><strong>Google Developers Group on Campus</strong> - Graphic Team Member <span role="img" aria-label="computer">💻</span></li>
+        <li><strong>English Literature Society</strong> - Decor Head & General Member <span role="img" aria-label="paint palette">🎨</span></li>
+    </ul>
+</section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <h2>Portfolio</h2>
+            
+            <div class="portfolio-categories">
+                <button class="portfolio-category" id="logos">Logos</button>
+                <button class="portfolio-category" id="posters">Posters</button>
+                <button class="portfolio-category" id="insta-posts">Instagram Posts</button>
+            </div>
+            
+            <div class="portfolio-images" id="portfolio-images">
+                <!-- Logos Section -->
+                <div class="category-content" id="logos-content" style="display: none;">
+                    <h3>Logos</h3>
+                    <div class="portfolio-gallery">
+                        <img src="FBC.jpg" alt="Logo 1" class="portfolio-img">
+                        <img src="fbcalt.png" alt="Logo 2" class="portfolio-img">
+                        <img src="welfare.jpg" alt="Logo 3" class="portfolio-img">
+                    </div>
+                </div>
+                
+                <!-- Posters Section -->
+                <div class="category-content" id="posters-content" style="display: none;">
+                    <h3>Posters</h3>
+                    <div class="portfolio-gallery">
+                        <img src="els.png" alt="Poster 1" class="portfolio-img">
+                        <img src="drFaustine.png" alt="Poster 2" class="portfolio-img">
+                        <img src="litBuzz.png" alt="Poster 3" class="portfolio-img">
+                    </div>
+                </div>
+                
+                <!-- Instagram Posts Section -->
+                <div class="category-content" id="insta-posts-content" style="display: none;">
+                    <h3>Instagram Posts</h3>
+                    <div class="portfolio-gallery">
+                        <img src="ig1.png" alt="Instagram Post 1" class="portfolio-img">
+                        <img src="ig2.png" alt="Instagram Post 2" class="portfolio-img">
+                        <img src="ig3.png" alt="Instagram Post 3" class="portfolio-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <div class="contact-icons">
+                <a href="https://github.com/Zehra0624" class="icon-circle"><i class="fab fa-github"></i></a>
+                <a href="mailto:p243045@pwr.nu.edu.pk" class="icon-circle"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+123456789" class="icon-circle"><i class="fas fa-phone"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Portfolio category switcher
+        document.getElementById('logos').addEventListener('click', function() {
+            showCategory('logos');
+        });
+        document.getElementById('posters').addEventListener('click', function() {
+            showCategory('posters');
+        });
+        document.getElementById('insta-posts').addEventListener('click', function() {
+            showCategory('insta-posts');
+        });
+
+        function showCategory(category) {
+            const allCategories = document.querySelectorAll('.category-content');
+            allCategories.forEach(function(categoryContent) {
+                categoryContent.style.display = 'none';
+            });
+            
+            const selectedCategory = document.getElementById(category + '-content');
+            selectedCategory.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
